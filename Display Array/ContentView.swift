@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    var str = ["Hello","World","Table","Football","Pipe","Code"]
+    var names = ["Hello","World","Table","Football","Pipe","Code"]
     var body: some View {
-        VStack{
-            ForEach(str.indices){ st in
-                Text("\(str[st])")
+        List {
+            ForEach(names, id: \.self) { name in
+                Text(name)
             }
         }
     }
